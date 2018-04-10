@@ -6,7 +6,7 @@ tooltip: |
     Run the Tandem Repeats Toos
 screenshots: []
 
-icon: null
+icon: TRF.png
 
 #
 # define a set of similar methods that might be useful to the user
@@ -32,6 +32,12 @@ parameters :
             Assembly
         short-hint : |
             The assembly to analyze
+    max_period_size :
+        ui-name : |
+            Maximum period size
+        short-hint : |
+            Maximum period size to report
+
 description : |
     <p>A tandem repeat in DNA is two or more adjacent, approximate copies of a
     pattern of nucleotides. Tandem Repeats Finder is a program to locate and

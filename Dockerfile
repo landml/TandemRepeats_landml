@@ -1,4 +1,4 @@
-FROM kbase/kbase:sdkbase.latest
+FROM kbase/kbase:sdkbase2.latest
 MAINTAINER KBase Developer
 # -----------------------------------------
 # In this section, you can install any system dependencies required
@@ -26,6 +26,19 @@ RUN pip install cffi --upgrade \
 COPY ./ /kb/module
 RUN mkdir -p /kb/module/work
 RUN chmod -R a+rw /kb/module
+
+# Install TandemRepeatFinder
+#
+RUN mkdir -p /kb/module/TandemRepeats/bin
+WORKDIR /kb/module/TandemRepeats/bin
+
+RUN \
+    git clone https://github.com/landml/TandemRepeats_landml && \
+    cp TandemRepeats_landml/src/trf409.linux64 . && \
+    chmod 555 FastTree2.1.9_64 && \
+    ln -s trf409.linux64 TandemRepeats
+
+
 
 WORKDIR /kb/module
 
