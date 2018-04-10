@@ -257,7 +257,7 @@ This sample module contains one small method - filter_contigs.
         reportObj['direct_html_link_index'] = 0
 
         SERVICE_VER = 'release'
-        reportClient = KBaseReport(self.callbackURL, token=ctx['token'], service_ver=SERVICE_VER)
+        reportClient = KBaseReport(self.callback_url, token=ctx['token'], service_ver=SERVICE_VER)
         report_info = reportClient.create_extended_report(reportObj)
 
 
