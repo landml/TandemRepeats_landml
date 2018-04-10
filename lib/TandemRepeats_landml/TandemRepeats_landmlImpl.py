@@ -3,10 +3,14 @@
 # The header block is where all import statments should live
 import os
 import sys
-from Bio import SeqIO
+import subprocess
+import uuid
+#from Bio import SeqIO
 from pprint import pprint, pformat
 from AssemblyUtil.AssemblyUtilClient import AssemblyUtil
 from KBaseReport.KBaseReportClient import KBaseReport
+#from datetime import datetime
+
 #END_HEADER
 
 
@@ -53,6 +57,7 @@ This sample module contains one small method - filter_contigs.
         # saved in the constructor.
         self.callback_url = os.environ['SDK_CALLBACK_URL']
         self.shared_folder = config['scratch']
+        self.scratch = os.path.abspath(config['scratch'])
 
         #END_CONSTRUCTOR
         pass
@@ -114,11 +119,6 @@ This sample module contains one small method - filter_contigs.
 
         print 'PATH: ', input_fasta_file
 
-        ### Construct the command
-        #
-        #  e.g. trf yoursequence.txt 2 7 7 80 10 50 500 -f -d -m
-        #
-        trf_cmd = [self.TRF_bin]
 
         # check for necessary files
         if not os.path.isfile(self.TRF_bin):
@@ -129,75 +129,91 @@ This sample module contains one small method - filter_contigs.
             raise ValueError("empty file '" + input_fasta_file + "'")
 
         # set the output path
-        timestamp = int((datetime.utcnow() - datetime.utcfromtimestamp(0)).total_seconds() * 1000)
-        output_dir = os.path.join(self.scratch, 'output.' + str(timestamp))
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-        output_trf_file_path = os.path.join(output_dir, 'tandem_repeats.txt');
+#        timestamp = int((datetime.utcnow() - datetime.utcfromtimestamp(0)).total_seconds() * 1000)
+#        output_dir = os.path.join(self.scratch, 'output.' + str(timestamp))
+#        if not os.path.exists(output_dir):
+#            os.makedirs(output_dir)
+#        output_trf_file_path = os.path.join(output_dir, 'tandem_repeats.txt');
 
-        trf_cmd.append(' ' + input_fasta_file + ' 2 7 7 80 10 50 500 -f -d -m')
+        ### Construct the command
+        #
+        #  e.g. trf yoursequence.txt 2 7 7 80 10 50 500 -f -d -m
+        #
+
+        trf_cmd = [self.TRF_bin]
+        trf_options = [str(input_fasta_file) ]
+
+        trf_match = 2
+        trf_options.append(str(trf_match))
+        trf_mismatch = 7
+        trf_options.append(str(trf_mismatch))
+        trf_delta = 7
+        trf_options.append(str(trf_delta))
+        trf_pm = 80
+        trf_options.append(str(trf_pm))
+        trf_pi = 10
+        trf_options.append(str(trf_pi))
+        trf_minscore = 50
+        trf_options.append(str(trf_minscore))
+        trf_maxperiod = 500
+        trf_options.append(str(trf_maxperiod))
+        trf_masked = "-m"
+        trf_options.append(trf_masked)
+        trf_flank  = "-f"
+        trf_options.append(trf_flank)
+        trf_data   = "-d"
+        trf_options.append(trf_data)
+        trf_noredun = "-r"
+        trf_maxTR = "-l 2"
+
+        trf_cmd = trf_cmd + trf_options
 
         # Run Tandem Repeats Finder, capture output as it happens
         #
         self.log(console, 'RUNNING TandemRepeatsFinder:')
         self.log(console, '    ' + ' '.join(trf_cmd))
 
-        # TRF requires shell=True in order to see input data
-        env = os.environ.copy()
-        #        p = subprocess.Popen(trf_cmd, \
-        joined_trf_cmd = ' '.join(trf_cmd)  # redirect out doesn't work with subprocess unless you join command first
-        p = subprocess.Popen([joined_trf_cmd], \
+        #  Runnin TandemRepeatFinder
+
+        p = subprocess.Popen(trf_cmd, \
                              cwd=self.scratch, \
-                             stdin=subprocess.PIPE, \
-                             stdout=subprocess.PIPE, \
-                             stderr=subprocess.PIPE, \
-                             shell=True, \
-                             env=env)
+                             shell = False
+                            )
+        retcode = p.wait()
 
-
-        p.wait()
-
-
-        # Read output
-        #
-        while True:
-            line = p.stdout.readline()
-            #line = p.stderr.readline()
-            if not line: break
-            self.log(console, line.replace('\n', ''))
-
-        p.stdout.close()
-        #p.stderr.close()
-        p.wait()
-        self.log(console, 'return code: ' + str(p.returncode))
+        self.log(console, 'Returned Contigs: ' + str(p.returncode))
         if p.returncode != 0:
-            raise ValueError('Error running TandemRepeatsFinder, return code: '+str(p.returncode) +
-                '\n\n'+ '\n'.join(console))
+            print "Number of Contigs Analyzed", p.returncode
 
         # Check that TandemRepeatsFinder produced output
         #
-        if not os.path.isfile(output_trf_file_path):
-            raise ValueError("failed to create FASTTREE output: "+output_newick_file_path)
-        elif not os.path.getsize(output_trf_file_path) > 0:
-            raise ValueError("created empty file for FASTTREE output: "+output_newick_file_path)
+        option_string = '.'.join(trf_options[0:8])
+        print os.listdir(self.scratch)
+        print "INPUT file = ", input_fasta_file
+
+        html_file =  option_string + ".summary.html"
+        mask_file = option_string + ".mask"
+        data_file = option_string + ".dat"
+        if not os.path.isfile(html_file):
+            html_file = option_string + ".1.html"
+        if not os.path.isfile(html_file):
+            raise ValueError("failed to create TandemRepeats output: " + html_file)
+        elif not os.path.getsize(html_file) > 0:
+            raise ValueError("created empty file for TandemRepeats output: "+html_file)
 
         # Upload results
         #
         if len(invalid_msgs) == 0:
             self.log(console,"UPLOADING RESULTS")  # DEBUG
 
+            with open(html_file,'r',0) as html_file_handle:
+                html_buf = html_file_handle.read()
+            self.log(console, html_buf+"\n")
 
-            with open(output_trf_file_path,'r',0) as output_trf_file_handle:
-                output_trf_buf = output_trf_file_handle.read()
-            output_trf_buf = output_trf_buf.rstrip()
-            if not output_trf_buf.endswith(';'):
-                output_trf_buf += ';'
-            self.log(console, output_trf_buf+"\n")
-
-            # If input data is invalid
-            #
         self.log(console, "BUILDING REPORT")  # DEBUG
 
+        # If input data is invalid
+        #
         if len(invalid_msgs) != 0:
             reportName = 'trf_report_' + str(uuid.uuid4())
             report += "FAILURE\n\n" + "\n".join(invalid_msgs) + "\n"
@@ -224,6 +240,7 @@ This sample module contains one small method - filter_contigs.
                          }
             return [returnVal]
 
+        # If input data is VALID
         # Create report obj
         #
         reportName = 'trf_report_'+str(uuid.uuid4())
@@ -231,12 +248,12 @@ This sample module contains one small method - filter_contigs.
                      'message': '',  # or is it 'text_message'?
                      'direct_html': '',
                      'direct_html_link_index': None,
-                     'file_links': [],
-                     'html_links': [],
+                     'file_links': [mask_file, data_file],
+                     'html_links': [html_file],
                      'workspace_name': params['workspace_name'],
                      'report_object_name': reportName
                      }
-        reportObj['objects_created'].append({'ref': str(params['workspace_name'])+'/'+str(params['output_name']),'description': 'Report'})
+#        reportObj['objects_created'].append({'ref': str(params['workspace_name'])+'/'+str(html_file),'description': 'Report'})
         reportObj['direct_html_link_index'] = 0
 
         SERVICE_VER = 'release'

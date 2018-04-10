@@ -102,7 +102,7 @@ class TandemRepeats_landmlTest(unittest.TestCase):
         assembly_ref = self.load_fasta_file(os.path.join(self.scratch, 'test1.fasta'),
                                             'TestAssembly',
                                             fasta_content)
-
+        assembly_ref = '1706/15/1'
         # Second, call your implementation
         ret = self.getImpl().tandem_repeats(self.getContext(),
                                             {'workspace_name': self.getWsName(),

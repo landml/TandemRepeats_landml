@@ -35,7 +35,7 @@ WORKDIR /kb/module/TandemRepeats/bin
 RUN \
     git clone https://github.com/landml/TandemRepeats_landml && \
     cp TandemRepeats_landml/src/trf409.linux64 . && \
-    chmod 555 FastTree2.1.9_64 && \
+    chmod 555 trf409.linux64 && \
     ln -s trf409.linux64 TandemRepeats
 
 
