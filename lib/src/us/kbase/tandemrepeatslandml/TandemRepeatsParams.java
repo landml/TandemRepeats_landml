@@ -32,6 +32,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
     "assembly_input_ref",
     "workspace_name",
+    "match_weight",
+    "mismatch_weight",
+    "delta_weight",
+    "prob_pm",
+    "prob_pi",
+    "min_score",
     "max_period_size"
 })
 public class TandemRepeatsParams {
@@ -40,6 +46,18 @@ public class TandemRepeatsParams {
     private String assemblyInputRef;
     @JsonProperty("workspace_name")
     private String workspaceName;
+    @JsonProperty("match_weight")
+    private Long matchWeight;
+    @JsonProperty("mismatch_weight")
+    private Long mismatchWeight;
+    @JsonProperty("delta_weight")
+    private Long deltaWeight;
+    @JsonProperty("prob_pm")
+    private Long probPm;
+    @JsonProperty("prob_pi")
+    private Long probPi;
+    @JsonProperty("min_score")
+    private Long minScore;
     @JsonProperty("max_period_size")
     private Long maxPeriodSize;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
@@ -74,6 +92,96 @@ public class TandemRepeatsParams {
         return this;
     }
 
+    @JsonProperty("match_weight")
+    public Long getMatchWeight() {
+        return matchWeight;
+    }
+
+    @JsonProperty("match_weight")
+    public void setMatchWeight(Long matchWeight) {
+        this.matchWeight = matchWeight;
+    }
+
+    public TandemRepeatsParams withMatchWeight(Long matchWeight) {
+        this.matchWeight = matchWeight;
+        return this;
+    }
+
+    @JsonProperty("mismatch_weight")
+    public Long getMismatchWeight() {
+        return mismatchWeight;
+    }
+
+    @JsonProperty("mismatch_weight")
+    public void setMismatchWeight(Long mismatchWeight) {
+        this.mismatchWeight = mismatchWeight;
+    }
+
+    public TandemRepeatsParams withMismatchWeight(Long mismatchWeight) {
+        this.mismatchWeight = mismatchWeight;
+        return this;
+    }
+
+    @JsonProperty("delta_weight")
+    public Long getDeltaWeight() {
+        return deltaWeight;
+    }
+
+    @JsonProperty("delta_weight")
+    public void setDeltaWeight(Long deltaWeight) {
+        this.deltaWeight = deltaWeight;
+    }
+
+    public TandemRepeatsParams withDeltaWeight(Long deltaWeight) {
+        this.deltaWeight = deltaWeight;
+        return this;
+    }
+
+    @JsonProperty("prob_pm")
+    public Long getProbPm() {
+        return probPm;
+    }
+
+    @JsonProperty("prob_pm")
+    public void setProbPm(Long probPm) {
+        this.probPm = probPm;
+    }
+
+    public TandemRepeatsParams withProbPm(Long probPm) {
+        this.probPm = probPm;
+        return this;
+    }
+
+    @JsonProperty("prob_pi")
+    public Long getProbPi() {
+        return probPi;
+    }
+
+    @JsonProperty("prob_pi")
+    public void setProbPi(Long probPi) {
+        this.probPi = probPi;
+    }
+
+    public TandemRepeatsParams withProbPi(Long probPi) {
+        this.probPi = probPi;
+        return this;
+    }
+
+    @JsonProperty("min_score")
+    public Long getMinScore() {
+        return minScore;
+    }
+
+    @JsonProperty("min_score")
+    public void setMinScore(Long minScore) {
+        this.minScore = minScore;
+    }
+
+    public TandemRepeatsParams withMinScore(Long minScore) {
+        this.minScore = minScore;
+        return this;
+    }
+
     @JsonProperty("max_period_size")
     public Long getMaxPeriodSize() {
         return maxPeriodSize;
@@ -101,7 +209,7 @@ public class TandemRepeatsParams {
 
     @Override
     public String toString() {
-        return ((((((((("TandemRepeatsParams"+" [assemblyInputRef=")+ assemblyInputRef)+", workspaceName=")+ workspaceName)+", maxPeriodSize=")+ maxPeriodSize)+", additionalProperties=")+ additionalProperties)+"]");
+        return ((((((((((((((((((((("TandemRepeatsParams"+" [assemblyInputRef=")+ assemblyInputRef)+", workspaceName=")+ workspaceName)+", matchWeight=")+ matchWeight)+", mismatchWeight=")+ mismatchWeight)+", deltaWeight=")+ deltaWeight)+", probPm=")+ probPm)+", probPi=")+ probPi)+", minScore=")+ minScore)+", maxPeriodSize=")+ maxPeriodSize)+", additionalProperties=")+ additionalProperties)+"]");
     }
 
 }

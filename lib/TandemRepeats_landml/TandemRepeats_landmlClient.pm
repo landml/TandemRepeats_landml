@@ -125,6 +125,12 @@ $output is a TandemRepeats_landml.TandemRepeatsResults
 TandemRepeatsParams is a reference to a hash where the following keys are defined:
 	assembly_input_ref has a value which is a TandemRepeats_landml.assembly_ref
 	workspace_name has a value which is a string
+	match_weight has a value which is an int
+	mismatch_weight has a value which is an int
+	delta_weight has a value which is an int
+	prob_pm has a value which is an int
+	prob_pi has a value which is an int
+	min_score has a value which is an int
 	max_period_size has a value which is an int
 assembly_ref is a string
 TandemRepeatsResults is a reference to a hash where the following keys are defined:
@@ -142,6 +148,12 @@ $output is a TandemRepeats_landml.TandemRepeatsResults
 TandemRepeatsParams is a reference to a hash where the following keys are defined:
 	assembly_input_ref has a value which is a TandemRepeats_landml.assembly_ref
 	workspace_name has a value which is a string
+	match_weight has a value which is an int
+	mismatch_weight has a value which is an int
+	delta_weight has a value which is an int
+	prob_pm has a value which is an int
+	prob_pi has a value which is an int
+	min_score has a value which is an int
 	max_period_size has a value which is an int
 assembly_ref is a string
 TandemRepeatsResults is a reference to a hash where the following keys are defined:
@@ -362,6 +374,12 @@ to indicate the type contained in the list or map.  For example:
 a reference to a hash where the following keys are defined:
 assembly_input_ref has a value which is a TandemRepeats_landml.assembly_ref
 workspace_name has a value which is a string
+match_weight has a value which is an int
+mismatch_weight has a value which is an int
+delta_weight has a value which is an int
+prob_pm has a value which is an int
+prob_pi has a value which is an int
+min_score has a value which is an int
 max_period_size has a value which is an int
 
 </pre>
@@ -373,6 +391,12 @@ max_period_size has a value which is an int
 a reference to a hash where the following keys are defined:
 assembly_input_ref has a value which is a TandemRepeats_landml.assembly_ref
 workspace_name has a value which is a string
+match_weight has a value which is an int
+mismatch_weight has a value which is an int
+delta_weight has a value which is an int
+prob_pm has a value which is an int
+prob_pi has a value which is an int
+min_score has a value which is an int
 max_period_size has a value which is an int
 
 

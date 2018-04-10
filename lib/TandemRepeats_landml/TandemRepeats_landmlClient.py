@@ -54,6 +54,9 @@ class TandemRepeats_landml(object):
            'int', 'float'.  Here we define a type named assembly_ref to
            indicate a string that should be set to a KBase ID reference to an
            Assembly data object.), parameter "workspace_name" of String,
+           parameter "match_weight" of Long, parameter "mismatch_weight" of
+           Long, parameter "delta_weight" of Long, parameter "prob_pm" of
+           Long, parameter "prob_pi" of Long, parameter "min_score" of Long,
            parameter "max_period_size" of Long
         :returns: instance of type "TandemRepeatsResults" (Here is the
            definition of the output of the function.  The output can be used

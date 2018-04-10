@@ -30,6 +30,12 @@ module TandemRepeats_landml {
     typedef structure {
         assembly_ref assembly_input_ref;
         string workspace_name;
+        int match_weight;
+        int mismatch_weight;
+        int delta_weight;
+        int prob_pm;
+        int prob_pi;
+        int min_score;
         int max_period_size;
     } TandemRepeatsParams;
 

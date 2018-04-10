@@ -31,8 +31,8 @@ This sample module contains one small method - filter_contigs.
     # the latter method is running.
     ######################################### noqa
     VERSION = "0.0.1"
-    GIT_URL = "https://github.com/landml/TandemRepeats_landml.git"
-    GIT_COMMIT_HASH = "67d70ffd2537489443c234bc80dc9cee9799a789"
+    GIT_URL = ""
+    GIT_COMMIT_HASH = ""
 
     #BEGIN_CLASS_HEADER
     # Class variables and functions can be defined in this block
@@ -84,9 +84,6 @@ This sample module contains one small method - filter_contigs.
            'int', 'float'.  Here we define a type named assembly_ref to
            indicate a string that should be set to a KBase ID reference to an
            Assembly data object.), parameter "workspace_name" of String,
-           parameter "match_weight" of Long, parameter "mismatch_weight" of
-           Long, parameter "delta_weight" of Long, parameter "prob_pm" of
-           Long, parameter "prob_pi" of Long, parameter "min_score" of Long,
            parameter "max_period_size" of Long
         :returns: instance of type "TandemRepeatsResults" (Here is the
            definition of the output of the function.  The output can be used

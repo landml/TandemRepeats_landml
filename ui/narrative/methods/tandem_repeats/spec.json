@@ -4,7 +4,7 @@
         "landml"
     ],
     "contact": "https://kbase.us/contact-us/",
-    "categories": ["active"],
+    "categories": ["active","sequence"],
     "widgets": {
         "input": null,
         "output": "no-display"
@@ -19,6 +19,84 @@
             "field_type": "text",
             "text_options": {
                 "valid_ws_types": [ "KBaseGenomeAnnotations.Assembly"]
+            }
+        },
+        {
+            "id": "match_weight",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_integer" : 1,
+                "max_integer" : 7
+            }
+        },
+        {
+            "id": "mismatch_weight",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_integer" : 1,
+                "max_integer" : 7
+            }
+        },
+        {
+            "id": "delta_weight",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_integer" : 1,
+                "max_integer" : 7
+            }
+        },
+        {
+            "id": "prob_pm",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_integer" : 75,
+                "max_integer" : 80
+            }
+        },
+        {
+            "id": "prob_pi",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_integer" : 10,
+                "max_integer" : 20
+            }
+        },
+        {
+            "id": "min_score",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_integer" : 1,
+                "max_integer" : 100
             }
         },
         {
@@ -49,6 +127,30 @@
                     "input_parameter": "assembly_input_ref",
                     "target_property": "assembly_input_ref",
                     "target_type_transform": "resolved-ref"
+                },
+                {
+                    "input_parameter": "match_weight",
+                    "target_property": "match_weight"
+                },
+                {
+                    "input_parameter": "mismatch_weight",
+                    "target_property": "mismatch_weight"
+                },
+                {
+                    "input_parameter": "delta_weight",
+                    "target_property": "delta_weight"
+                },
+                {
+                    "input_parameter": "prob_pm",
+                    "target_property": "prob_pm"
+                },
+                {
+                    "input_parameter": "prob_pi",
+                    "target_property": "prob_pi"
+                },
+                {
+                    "input_parameter": "min_score",
+                    "target_property": "min_score"
                 },
                 {
                     "input_parameter": "max_period_size",
