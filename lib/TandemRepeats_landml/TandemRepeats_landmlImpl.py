@@ -243,13 +243,28 @@ This sample module contains one small method - filter_contigs.
         # If input data is VALID
         # Create report obj
         #
+        file_links = list()
+        html_links = list()
+        file_links.append({'path' : html_file,
+                           'name' : os.path.basename(html_file),
+                           'desc' : 'HTML file output'})
+        file_links.append({'path' : mask_file,
+                           'name' : os.path.basename(mask_file),
+                           'desc' : 'Masked file output'})
+        file_links.append({'path' : data_file,
+                           'name' : os.path.basename(data_file),
+                           'desc' : 'Data file output'})
+        html_links.append({'path' : html_file,
+                           'name' : os.path.basename(html_file),
+                           'desc' : 'HTML file output'})
+
         reportName = 'trf_report_'+str(uuid.uuid4())
         reportObj = {'objects_created': [],
                      'message': '',  # or is it 'text_message'?
                      'direct_html': '',
                      'direct_html_link_index': None,
-                     'file_links': [mask_file, data_file],
-                     'html_links': [html_file],
+                     'file_links': file_links,
+                     'html_links': html_links,
                      'workspace_name': params['workspace_name'],
                      'report_object_name': reportName
                      }

@@ -23,14 +23,15 @@
         },
         {
             "id": "max_period_size",
-            "optional": false,
-            "advanced": false,
+            "optional": true,
+            "advanced": true,
             "allow_multiple": false,
             "default_values": [ "" ],
             "field_type": "text",
             "text_options": {
                 "validate_as": "int",
-                "min_integer" : 0
+                "min_integer" : 1,
+                "max_integer" : 2000
             }
         }
     ],

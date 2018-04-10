@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea82cf43-c3d9-49ff-bc19-c26f69f93e5e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/lib/TandemRepeats_landml/TandemRepeats_landmlImpl.py" afterPath="$PROJECT_DIR$/lib/TandemRepeats_landml/TandemRepeats_landmlImpl.py" />
-      <change beforePath="$PROJECT_DIR$/test/TandemRepeats_landml_server_test.py" afterPath="$PROJECT_DIR$/test/TandemRepeats_landml_server_test.py" />
       <change beforePath="$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/display.yaml" afterPath="$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/display.yaml" />
+      <change beforePath="$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/spec.json" afterPath="$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/spec.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,20 +29,21 @@
       <file leaf-file-name="spec.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/spec.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="900">
+              <caret line="60" column="52" lean-forward="true" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TandemRepeats_landmlImpl.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TandemRepeats_landmlImpl.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/TandemRepeats_landml/TandemRepeats_landmlImpl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="35" column="58" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="58" />
+            <state relative-caret-position="797">
+              <caret line="266" column="45" lean-forward="false" selection-start-line="266" selection-start-column="45" selection-end-line="266" selection-end-column="45" />
               <folding>
                 <element signature="e#99#108#0" expanded="true" />
+                <element signature="e#8267#9225#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -51,8 +52,8 @@
       <file leaf-file-name="TandemRepeats_landml_server_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/TandemRepeats_landml_server_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="994">
-              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state relative-caret-position="769">
+              <caret line="96" column="35" lean-forward="false" selection-start-line="95" selection-start-column="40" selection-end-line="96" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -61,18 +62,18 @@
       <file leaf-file-name="display.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/display.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="44">
+              <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="390">
+              <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -84,6 +85,8 @@
     <findStrings>
       <find>dfu</find>
       <find>trf_bin</find>
+      <find>return code</find>
+      <find>Done</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,19 +96,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/TandemRepeats_landml.spec" />
-        <option value="$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/spec.json" />
+        <option value="$PROJECT_DIR$/test_local/test.cfg" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/test/TandemRepeats_landml_server_test.py" />
         <option value="$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/display.yaml" />
-        <option value="$PROJECT_DIR$/test_local/test.cfg" />
+        <option value="$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/spec.json" />
         <option value="$PROJECT_DIR$/lib/TandemRepeats_landml/TandemRepeats_landmlImpl.py" />
-        <option value="$PROJECT_DIR$/Dockerfile" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1206" />
-    <option name="y" value="79" />
-    <option name="width" value="1390" />
+    <option name="x" value="994" />
+    <option name="y" value="60" />
+    <option name="width" value="1548" />
     <option name="height" value="1206" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -220,10 +223,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1206" y="79" width="1390" height="1206" extended-state="0" />
+    <frame x="994" y="60" width="1548" height="1206" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2935252" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2635659" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -246,7 +249,25 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lib/TandemRepeats_landml/TandemRepeats_landmlImpl.py</url>
+          <line>212</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lib/TandemRepeats_landml/TandemRepeats_landmlImpl.py</url>
+          <line>220</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lib/TandemRepeats_landml/TandemRepeats_landmlImpl.py</url>
+          <line>200</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -274,14 +295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/spec.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TandemRepeats_landml.spec">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -298,14 +311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/display.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deploy.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -314,29 +319,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/TandemRepeats_landml/TandemRepeats_landmlImpl.py">
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="35" column="58" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="58" />
-          <folding>
-            <element signature="e#99#108#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/TandemRepeats_landml_server_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="994">
-          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        <state relative-caret-position="769">
+          <caret line="96" column="35" lean-forward="false" selection-start-line="95" selection-start-column="40" selection-end-line="96" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
+    <entry file="file://$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/display.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="44">
+          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/narrative/methods/tandem_repeats/spec.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="52" lean-forward="true" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/TandemRepeats_landml/TandemRepeats_landmlImpl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="797">
+          <caret line="266" column="45" lean-forward="false" selection-start-line="266" selection-start-column="45" selection-end-line="266" selection-end-column="45" />
+          <folding>
+            <element signature="e#99#108#0" expanded="true" />
+            <element signature="e#8267#9225#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

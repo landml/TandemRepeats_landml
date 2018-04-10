@@ -1,9 +1,9 @@
 #
 # define display information
 #
-name: Tandem Repeats 4.09
+name: Tandem Repeats Finder 4.09
 tooltip: |
-    Run the Tandem Repeats Toos
+    Run the Tandem Repeats Finder Tool
 screenshots: []
 
 icon: TRF.png
