@@ -36,7 +36,11 @@ parameters :
         ui-name : |
             Maximum period size
         short-hint : |
-            Maximum period size to report
+            Maximum period size
+        long-hint : |
+            Period size is the program's best guess at the pattern size of the tandem repeat. The program will find all repeats with period size between 1 and 2000, but the output can be limited to a smaller range.
+        placeholder : |
+            500
 
 description : |
     <p>A tandem repeat in DNA is two or more adjacent, approximate copies of a
@@ -55,14 +59,15 @@ description : |
     Submitted sequences may be of arbitrary length. Repeats with pattern
     size in the range from 1 to 2000 bases are detected. Sequence information
     sent to the server is confidential and deleted after program execution.
+    </p>
 
-    <a HREF="868y4Zg25ikZE.2.7.7.80.10.50.500.1.html">Example of output.</a>
+    <a HREF="https://tandem.bu.edu/trf/868y4Zg25ikZE.2.7.7.80.10.50.500.1.html">Example of output.</a>
     <hr>
     <p>This material is based upon work supported by the National Science
     Foundation under Grant No. CCR-9623532</p>
-    <p>This is a simple method designed to illustrate the KBase SDK.</p>
 
-    </p>
+
+
 
 publications:
   -

@@ -280,8 +280,7 @@ This sample module contains one small method - filter_contigs.
         #
         self.log(console,"BUILDING RETURN OBJECT")
         returnVal = { 'report_name': report_info['name'],
-                      'report_ref': report_info['ref'],
-                      'output_ref': str(new_obj_info[6])+'/'+str(new_obj_info[0])+'/'+str(new_obj_info[4])
+                      'report_ref': report_info['ref']
                       }
 
         self.log(console,"run_TandemRepeats DONE")
