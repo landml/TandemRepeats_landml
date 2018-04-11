@@ -3,7 +3,7 @@
 #
 name: Tandem Repeats Finder 4.09
 tooltip: |
-    Run the Tandem Repeats Finder Tool
+    Run the Tandem Repeats Finder Tool from Boston University
 screenshots: []
 
 icon: TRF.png
@@ -147,6 +147,7 @@ description : |
     <hr>
     <p>This material is based upon work supported by the National Science
     Foundation under Grant No. CCR-9623532</p>
+    <p><a href="http://tandem.bu.edu/trf/trf.html">Tandem Repeats Finder Home Page</a></p>
 
 
 
